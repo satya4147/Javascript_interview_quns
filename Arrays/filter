@@ -1,0 +1,6 @@
+
+//filter mathod is find the match all element
+
+  const str = ['hello','world','welcome','javascript']
+  const result = str.filter(Element=> Element.length>5)
+  console.log(result)
