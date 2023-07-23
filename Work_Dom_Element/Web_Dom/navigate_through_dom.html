@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigate_through_dom</title>
+  <style>
+    .first_container, .Second_container{
+      width: 300px;
+      height: 200px;
+      border: 1px solid black;
+      margin: 20px 10px;
+      display: inline-block;
+      overflow: auto;
+    }
+    input ,button{
+      display: block;
+      margin: 50px;
+    }
+   
+      button {
+    /* margin-right: 112px; */
+    margin-left: 100px;
+    margin-top: -42px;
+}
+    
+  </style>
+</head>
+<body>
+  
+    <div class="first_container" onclick="mainClick()">
+      <ul>
+        <li>First division</li>
+        <li>Second division</li>
+      </ul>
+    </div>
+    <div class="Second_container">
+      <input type="text" placeholder="Enter Text">
+      <button onclick="btnClick()">click</button>
+    </div>
+
+
+    <script>
+      
+      function mainClick(){
+        //console.log(document.documentElement) //total html
+        //console.log(document.head) // total head tags
+        //console.log(document.body) // boby content
+       // console.log(document.body.childNodes) //all white space new line div 
+      //  console.log(document.body.children)
+
+      //   for(let i=0 ;i<=document.body.childNodes.length ; i++){
+      //     console.log(document.body.childNodes[i])
+      //   }
+      let text = document.getElementsByClassName("first_container");
+          console.log(text.parentNode)
+
+
+      }
+    </script>
+
+</body>
+</html>

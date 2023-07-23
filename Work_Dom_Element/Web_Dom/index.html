@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom and web</title>
+</head>
+<body>
+  <h1 id="text">Time Wating....</h1>
+  <button id="btn" onclick="showTime()">Timeclick</button>
+  <button id="btn1" onclick="stopTime()">StopTime</button>
+
+  <script>
+     
+    //  let btn = document.getElementById('btn');
+    //  let btn1 = document.getElementById('btn1');
+    let text = document.getElementById('text')
+
+      let count = 0
+      let timestopObj;
+      function showTime(){
+        timestopObj = setInterval(function(){
+        text.innerHTML = 'show the timer..' + count ;
+        count++
+       },1000)
+      }
+
+        function stopTime(){
+          setTimeout(()=>{
+            clearInterval(timestopObj)
+            
+          })
+        }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event_bubbling</title>
+</head>
+  <style>
+    
+     div{
+
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black; 
+      width: 300px;
+      height: 300px;
+      background-color: aquamarine;
+      color: blue;
+    }
+  </style>
+<body>
+  <div id="btn">  
+    <button name="btn1" id="btn2" >ClickMe!</button>
+  </div>
+  <h2>bubbling is bottom-to-top</h2>
+  <h2>capturnig is top-to-bottom </h2>
+
+    <script>
+      let btn =  document.getElementById('btn');
+      let btn2 =  document.getElementById('btn2');
+
+      window.onload = function(){
+
+        btn.addEventListener('click',divclick,true)
+        btn2.addEventListener('click',buttonClick , true)
+      }
+      function divclick(){
+        alert('div is clicked')
+      }
+      function buttonClick(){
+        //alert(event.target.name)
+        event.stopPropagation(); //divs click is stoped
+        alert('buttons is clicked')
+      }
+    </script>
+
+</body>
+</html>

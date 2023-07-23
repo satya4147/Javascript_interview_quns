@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date</title>
+</head>
+<body>
+  <h1 id="text1">Wating....</h1>
+  <button onclick="startTime()">StartTime</button>
+  <button onclick="stopTime()">StopTime</button>
+
+  <script>
+    //let h1text = document.getElementsByClassName('text1');
+
+      let count =0;
+      let stopObj;
+      function startTime(){
+        stopObj = setInterval(()=>{
+          document.getElementById('text1').innerHTML = new Date();
+          count++;
+        },1000)
+      }
+
+      function stopTime(){
+        clearInterval(stopObj);
+      }
+
+  </script>
+</body>
+</html>

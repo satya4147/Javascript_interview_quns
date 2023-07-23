@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input</title>
+  <style>
+    body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    }
+    div{
+      width: 300px;
+      border: 1px solid black;
+    text-align: center;
+    padding: 10px auto;
+    background: brown;
+    color: white;
+    font-size: 13px;
+   
+    }
+
+    input {
+      margin: 20px 0;
+    }
+    input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    margin-right: -10px;
+}
+  .select_text{
+        /* margin-top: -42px; */
+        padding-top: 5px;
+    text-align: center;
+    margin: 18px;
+    margin-top: -10px;
+  }
+  </style>
+</head>
+<body>
+  <div id="text">
+    <h1 id="htext">Event Status</h1>
+      <input type="text" onfocus="handleclick()"><br>
+     <input type="checkbox" onchange="handleclick(this.checked)">
+     <select class="select_text" onchange="handleclick( this.options[this.selectedIndex].text)">
+      <option value="1">one</option>
+      <option value="2">two</option>
+      <option value="3">three</option>
+      <option value="4">four</option>
+      <option value="5">five</option>
+     </select>
+      
+</div>
+  
+  <script>
+    function handleclick(msg){
+      document.getElementById('htext').innerHTML = msg
+    }
+  </script>
+  
+     
+  </div>
+</body>
+</html>
